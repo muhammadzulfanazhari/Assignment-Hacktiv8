@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "c1053c0a-6485-4238-aa6e-c470ef50c4c3",
+		"name": "Assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15377539"
+	},
+	"item": [
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\":\"Riki\",\r\n    \"items\":[\r\n        {\r\n            \"item_code\":\"123\",\r\n            \"description\":\"Samsung S8\",\r\n            \"quantity\":1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4444/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\":\"Joni\",\r\n    \"items\":[\r\n        {\r\n            \"line_item_id\": 1,\r\n            \"item_code\":\"123\",\r\n            \"description\":\"Samsung S10\",\r\n            \"quantity\":1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4444/orders/4",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"orders",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"Zulfan\",\r\n    \"items\":[\r\n        {\r\n            \"itemCode\":\"123\",\r\n            \"description\":\"Samsung S8\",\r\n            \"quantity\":1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4444/orders/3",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
